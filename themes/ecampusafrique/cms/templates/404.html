@@ -1,0 +1,32 @@
+<%page expression_filter="h"/>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
+<%inherit file="base.html" />
+<%block name="title">${_("Page Not Found")}</%block>
+<%block name="bodyclass">view-util util-404</%block>
+
+
+<%block name="content">
+<div class="wrapper-content wrapper">
+  <section class="content">
+    <header>
+      <h1 class="title title-1">${_("Page not found")}</h1>
+      <h2>/edx/app/edxapp/edx-platform/cms/templates/400.html</h2>
+      <h3>Beautify this?</h3>
+    </header>
+    <article class="content-primary" role="main">
+      <p>
+      ${_('The page that you were looking for was not found.')}
+      ${Text(_('Go back to the {homepage} or let us know about any pages that may have been moved at {email}.')).format(
+        homepage=HTML('<a href="/">homepage</a>'),
+        email=HTML('<a href="mailto:{address}">{address}</a>').format(
+          address=Text(settings.TECH_SUPPORT_EMAIL)
+        )
+      )}
+      </p>
+    </article>
+  </section>
+</div>
+</%block>

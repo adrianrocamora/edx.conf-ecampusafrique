@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd /root
-rm -rf osh
-rm -rf /edx/app/edxapp/edx-platform/themes/osh
+rm -rf edx.conf-ecampusafrique
+rm -rf /edx/app/edxapp/edx-platform/themes/ecampusafrique
 
 git clone https://github.com/ecampusafrique/edx.conf-ecampusafrique.git
 chown edxapp -R edx.conf-ecampusafrique
