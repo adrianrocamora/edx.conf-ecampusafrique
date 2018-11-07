@@ -83,11 +83,10 @@ from pipeline_mako import render_require_js_path_overrides
 
   <!-- McDaniel: nov-2018 custom favicon -->
   <link rel="icon" type="image/x-icon" href="${static.url("images/favicon.png")}" />
-
   <!-- McDaniel: nov-2018 styling customizations -->
   <link type="text/css" rel="stylesheet" href="${static.url('css/custom.css')}">
+  <!-- McDaniel Nov-2018: force Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- McDaniel Nov-2018 -->
 
   <%static:css group='style-vendor'/>
   % if '/' in self.attr.main_css:
