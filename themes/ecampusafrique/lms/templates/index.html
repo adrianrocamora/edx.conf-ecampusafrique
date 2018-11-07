@@ -8,6 +8,10 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
+<%
+  <!-- try to force Bootstrap to work on home page. -->
+  uses_bootstrap = true
+%>
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
