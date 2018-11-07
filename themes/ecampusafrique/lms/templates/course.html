@@ -8,6 +8,21 @@ from django.utils.translation import ugettext as _
 from django.urls import reverse
 from six import text_type
 %>
+<style>
+  .course {
+    box-shadow:	0 0 11px 0 rgba(0,0,0,.25);
+    border-bottom: none;
+  }
+
+
+  .course-button {
+    background-image: linear-gradient(-45deg,#002092,#0ea6b5);
+  }
+
+  .courses .course {
+    border: none;
+  }
+</style>
 <%page args="course" expression_filter="h"/>
 <article class="course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
   <a href="${reverse('about_course', args=[text_type(course.id)])}">
@@ -17,10 +32,12 @@ from six import text_type
         <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
       </div>
     </header>
-    <div class="course-info" aria-hidden="true">
-      <h2 class="course-name">
+    <div class="" aria-hidden="true">
+
+      <span class="">${course.display_org_with_default}</span>
+
+      <h2 class="">
         <!--
-        <span class="course-organization">${course.display_org_with_default}</span>
         <span class="course-code">${course.display_number_with_default}</span>
         -->
         <span class="text-center">${course.display_name_with_default}</span>
