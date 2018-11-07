@@ -50,14 +50,27 @@ from openedx.core.djangolib.markup import HTML, Text
       color: #405060;
       margin: 35px 0 0;
       font-family: Raleway,Lato,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+      text-align: center;
+      margin-top: 10px;
   }
-
+  .course-number {
+    text-size: smaller;
+    font-weight: lighter;
+  }
   .course-description {
-    display: none !important;
+    display: none;
   }
   .course-description:hover {
-    display: inherit;
+    display: block;
   }
+  .course-description p {
+    .color: #666;
+    margin: 5px;
+    font-weight: lighter;
+    font-size: small;
+    text-align: center;
+  }
+
 
 </style>
 <header>
