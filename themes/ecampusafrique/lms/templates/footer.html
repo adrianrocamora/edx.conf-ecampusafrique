@@ -12,15 +12,20 @@
 % if uses_bootstrap:
   <div class="container-fluid wrapper-footer">
     <footer>
-      <div class="row">
-        <div class="col-md-12">
-          <p class="copyright center">© Ecampus Afrique. All rights reserved except where noted.</p>
-        </div>
-      </div>
     </footer>
   </div>
 % else:
-  <p>This site needs Bootstrap! :(</p>
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx" class="grid-container"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
+  </footer>
+</div>
 % endif
 % if include_dependencies:
   <%static:js group='base_vendor'/>

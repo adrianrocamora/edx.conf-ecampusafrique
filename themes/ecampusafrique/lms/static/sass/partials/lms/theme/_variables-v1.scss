@@ -418,17 +418,16 @@ $button-bg-color: transparent !default;
 $button-bg-hover-color: $white !default;
 
 // action - primary
-// McDaniel Nov-2018: changing blues to greens
-$action-primary-bg: $m-green-d3 !default;
+$action-primary-bg: $m-blue-d3 !default;
 $action-primary-fg: $white !default;
-$action-primary-shadow: $m-green-d4 !default;
-$action-primary-focused-bg: $m-green-d1 !default;
+$action-primary-shadow: $m-blue-d4 !default;
+$action-primary-focused-bg: $m-blue-d1 !default;
 $action-primary-focused-fg: $white !default;
-$action-primary-active-bg: $m-green !default;
-$action-primary-active-fg: $m-green-d3 !default;
-$action-primary-active-shadow: $m-green-d2 !default;
-$action-primary-active-focused-fg: $m-green-d4 !default;
-$action-primary-active-focused-shadow: $m-green-d3 !default;
+$action-primary-active-bg: $m-blue !default;
+$action-primary-active-fg: $m-blue-d3 !default;
+$action-primary-active-shadow: $m-blue-d2 !default;
+$action-primary-active-focused-fg: $m-blue-d4 !default;
+$action-primary-active-focused-shadow: $m-blue-d3 !default;
 $action-primary-disabled-bg: $m-gray-d3 !default;
 $action-prmary-disabled-fg: $white !default;
 

@@ -1,7 +1,5 @@
 // Default bootstrap theming
 
-@import 'edx-bootstrap/sass/open-edx/theme';
-
 
 /* McDaniel Nov-2018: custom colors. */
 // Bootstrap theme colors from $theme-colors
@@ -10,14 +8,6 @@ $yellow: #fcd116;     // Mali flag yellow
 $red: #ce1126;        // Mali flag red
 
 $primary: $red;
-$secondary: #333;        // McDaniel: per customizations & markups from Jim
-$body-bg: #f1f1f1;        // McDaniel Oct-2018: set the outer background of all pages to light-gray
 
-
-
-
-// Modify theme color scheme
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary
-);
+// This belongs at the bottom of file, i guess?
+@import 'edx-bootstrap/sass/open-edx/theme';
