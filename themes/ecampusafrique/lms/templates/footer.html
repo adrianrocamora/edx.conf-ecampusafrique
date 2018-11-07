@@ -15,17 +15,17 @@
     </footer>
   </div>
 % else:
-<div class="wrapper wrapper-footer">
-  <footer id="footer-openedx" class="grid-container"
-    ## When rendering the footer through the branding API,
-    ## the direction may not be set on the parent element,
-    ## so we set it here.
-    % if bidi:
-      dir=${bidi}
-    % endif
-  >
-  </footer>
-</div>
+  <div class="wrapper wrapper-footer">
+    <footer id="footer-openedx" class="grid-container"
+      ## When rendering the footer through the branding API,
+      ## the direction may not be set on the parent element,
+      ## so we set it here.
+      % if bidi:
+        dir=${bidi}
+      % endif
+    >
+    </footer>
+  </div>
 % endif
 % if include_dependencies:
   <%static:js group='base_vendor'/>
