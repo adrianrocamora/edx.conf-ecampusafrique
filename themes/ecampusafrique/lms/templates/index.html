@@ -14,34 +14,24 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .outer-wrapper {
-    background-image: url('${static.url("images/logo.svg")}');
+    background-image: url('${static.url("images/homepage-banner.jpg")}');
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 360px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
 </style>
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
         <div class="outer-wrapper">
-
-          <%include file="index_promo_video.html" />
         </div>
-
       </header>
       <%include file="${courses_list}" />
-
     </section>
 </main>
 
-% if show_homepage_promo_video:
-  <section id="video-modal" class="modal home-page-video-modal video-modal">
-    <div class="inner-wrapper">
-      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-% endif
 
 <%block name="js_extra">
    <script type="text/javascript">
