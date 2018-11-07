@@ -7,3 +7,13 @@
 $green: #17B53A;      // Mali flag green
 $yellow: #FCD117;     // Mali flag yellow
 $red: #CE0E26;        // Mali flag red
+
+
+
+// Modify theme color scheme
+$theme-colors: (
+//  "primary": $primary,
+  "primary": $red,
+  "secondary": $secondary,
+  "rover-menu": $rover-menu
+);
