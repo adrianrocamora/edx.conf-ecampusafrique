@@ -11,7 +11,6 @@ from openedx.core.djangolib.markup import HTML, Text
 
   /* -------- shit that works ----------------- */
   .course:hover .course-image .cover-image {
-    transition: all .5s ease-in-out;
   }
 
   .course-description {
@@ -20,8 +19,13 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .course:hover .course-description {
+    transition: all .5s ease-in-out;
     display: block;
     height: inherit;
+  }
+
+  .course:hover .course-organization, .course:hover .course-name {
+    display: none;
   }
 
   /* -------- shit that works ----------------- */
