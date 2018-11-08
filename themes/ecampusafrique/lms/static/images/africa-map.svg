@@ -48,7 +48,7 @@
  */
 .land
 {
-   fill: #b9b9b9;
+   fill: #14b53a;
    fill-opacity: 1;
    stroke:white;
    stroke-opacity: 1;
@@ -64,6 +64,13 @@
 {
    stroke-width: 0.3;
 }
+
+.gb, .au, .nc
+{
+  opacity: 1;
+   fill:   red;
+}
+
 
 /*
  * Additional style rules
@@ -82,7 +89,7 @@
  * .ms, .ky
  * {
  *    opacity:    1;
- *    fill:       #ff0000;
+ *    fill:       red;
  * }
  *
  * Remove european territories (i.e. Madeira, Reunion etc.)
