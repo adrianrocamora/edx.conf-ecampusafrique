@@ -8,6 +8,33 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
+  header.course-preview {
+    &:hover, &:focus {
+      background-image: none !important;
+    }
+
+    .info-link {
+      border-left: 1px solid rgba(150,150,150, 0.5);
+
+      color: green;
+      opacity: 0.25;
+    }
+
+    .info {
+      background: yellow;
+      height: 220px + 130px;
+
+      .cover-image {
+        height: 200px;
+
+        img {
+          display: block;
+          min-height: 100%;
+          width: 100%;
+        }
+      }
+
+  }
 
   /* ---------------------------------------------------------------------- */
   .ecampus-title {
