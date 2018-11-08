@@ -16,8 +16,15 @@ from branding import api as branding_api
 <h1 class="header-logo">
   <a href="${branding_api.get_home_url()}">
     <%block name="navigation_logo">
-    <!-- McDaniel: nov-2018 custom favicon -->
-    <img  class="logo" src="${static.url("images/africa-map.svg")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+      <!-- McDaniel: nov-2018 custom favicon -->
+      <div class="ecampus-title">
+        <div class="ecampus-title-left">
+          <img  class="logo" src="${static.url("images/africa-map.svg")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+        </div>
+        <div class="ecampus-title-right">
+          <h1>Ecampus Afrique</h1>
+        </div>
+      </div>
     </%block>
   </a>
   % if course:
