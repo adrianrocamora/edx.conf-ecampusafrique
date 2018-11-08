@@ -12,15 +12,16 @@ from openedx.core.djangolib.markup import HTML, Text
   /* -------- shit that works ----------------- */
   .course:hover .course-image .cover-image {
     transition: all .5s ease-in-out;
-    height: 300px !important;
   }
 
   .course-description {
     display: none;
+    height: 0;
   }
 
   .course:hover .course-description {
     display: block;
+    height: inherit;
   }
 
   /* -------- shit that works ----------------- */
