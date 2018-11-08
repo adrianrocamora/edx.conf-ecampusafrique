@@ -69,10 +69,20 @@ from openedx.core.djangolib.markup import HTML, Text
     border: none;
   }
 
-  // hide cover image slider
-  .courses-container .courses .course .course-image .cover-image::before {
-    background: none !important;
+  .cover-image:hover, .cover-image:focus {
+    background: red;
+    border-color: green;
+    box-shadow: 0 1px 4px 0 rgba($shadow-color, 0.4);
+
+    .info {
+      top: 0;
+    }
+
+    .meta-info {
+      opacity: 0;
+    }
   }
+
   .course-organization {
     color: #fff !important;
     margin: auto;
@@ -97,9 +107,7 @@ from openedx.core.djangolib.markup import HTML, Text
   .course-description {
     color: #fff;
   }
-  .course-description:hover {
-    color: #666;
-  }
+
   .course-description p {
     color: #666;
     margin: 5px;
