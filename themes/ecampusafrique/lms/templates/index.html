@@ -8,9 +8,6 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
-  svg:hover {
-    fill: #ce1126 !important;
-  }
 
   .ecampus-title {
     transition: all .5s ease-in-out;
@@ -86,16 +83,14 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .course-name {
-      font-size: 1.4em !important;
-      font-weight: 700 !important;
-      color: #405060 !important;
-      margin: 35px 0 0 !important;
-      font-family: Raleway,Lato,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+      font-size: smaller;
+      font-weight: 600;
+      color: #405060;
       text-align: center !important;
       margin-top: 10px !important;
   }
   .course-number {
-    text-size: smaller;
+    font-size: small;
     font-weight: lighter;
   }
   .course-description {
@@ -113,7 +108,11 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .learn-more {
-
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #999;
+    background-color: #f1f1f1;
   }
 </style>
 <header>
