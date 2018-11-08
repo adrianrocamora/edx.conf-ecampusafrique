@@ -8,9 +8,21 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
-.courses-container .courses .course:hover .course-image .cover-image {
-    height: 300px;
-}
+
+  /* -------- shit that works ----------------- */
+  .course:hover .course-image .cover-image {
+      height: 300px;
+  }
+
+  .course-description {
+    display: none;
+  }
+
+  .course:hover .course-description {
+    display: block;
+  }
+
+  /* -------- shit that works ----------------- */
 
   div.cover-image:hover, div.cover-image:focus {
     background: red;
@@ -131,9 +143,6 @@ from openedx.core.djangolib.markup import HTML, Text
     font-size: x-small;
     font-weight: lighter;
     font-style: italic;
-  }
-  .course-description {
-    color: #fff;
   }
 
   .course-description p {
