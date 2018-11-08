@@ -9,7 +9,7 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
   .land:hover {
-    fill: #ce1126;
+    fill: #ce1126 !important;
    }
   .ecampus-title {
     transition: all .5s ease-in-out;
@@ -34,6 +34,9 @@ from openedx.core.djangolib.markup import HTML, Text
     text-decoration: none;
   }
 
+  a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+    color: #c31126;
+  }
   .global-header .header-logo a .logo {
     height: 50px !important;
   }
