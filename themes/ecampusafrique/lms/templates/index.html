@@ -12,44 +12,38 @@ from openedx.core.djangolib.markup import HTML, Text
     background: red;
     border-color: green;
   }
-  div.cover-image, div.cover-image {
-    .info {
-      top: 0;
-    }
-
-    .meta-info {
-      opacity: 0;
-    }
+  div.cover-image .info {
+    top: 0;
   }
 
+  div.cover-image .meta-info {
+    opacity: 0;
+  }
 
   header.course-preview:hover, header.course-preview:focus {
       background-image: none !important;
   }
-  header.course-preview, header.course-preview {
-
-    .info-link {
-      border-left: 1px solid rgba(150,150,150, 0.5);
-
-      color: green;
-      opacity: 0.25;
-    }
-
-    .info {
-      background: yellow;
-      height: 220px + 130px;
-
-      .cover-image {
-        height: 200px;
-
-        img {
-          display: block;
-          min-height: 100%;
-          width: 100%;
-        }
-      }
-    }
+  header.course-preview .info-link {
+    border-left: 1px solid rgba(150,150,150, 0.5);
+    color: green;
+    opacity: 0.25;
   }
+
+  header.course-preview .info {
+    background: yellow;
+    height: 220px + 130px;
+  }
+
+  header.course-preview .cover-image {
+    height: 200px;
+  }
+
+  header.course-preview img {
+    display: block;
+    min-height: 100%;
+    width: 100%;
+  }
+
 
   /* ---------------------------------------------------------------------- */
   .ecampus-title {
