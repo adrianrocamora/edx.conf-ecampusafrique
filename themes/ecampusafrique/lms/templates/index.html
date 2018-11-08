@@ -28,46 +28,24 @@ from openedx.core.djangolib.markup import HTML, Text
     display: none !important;
   }
 
+  .course:hover .learn-more {
+    background-color: inherit;
+    background-image: linear-gradient(-45deg, #14b53a, #fcd116, #ce1126);
+    width: 80%;
+    border-radius: 3px;
+  }
+
+  .learn-more {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #999;
+    background-color: #f1f1f1;
+  }
+
+
   /* -------- shit that works ----------------- */
 
-  div.cover-image:hover, div.cover-image:focus {
-    background: red;
-    border-color: green;
-  }
-  div.cover-image .info {
-    top: 0;
-  }
-
-  div.cover-image .meta-info {
-    opacity: 0;
-  }
-
-  header.course-preview:hover, header.course-preview:focus {
-      background-image: none !important;
-  }
-  header.course-preview .info-link {
-    border-left: 1px solid rgba(150,150,150, 0.5);
-    color: green;
-    opacity: 0.25;
-  }
-
-  header.course-preview .info {
-    background: yellow;
-    height: 220px + 130px;
-  }
-
-  header.course-preview .cover-image {
-    height: 200px;
-  }
-
-  header.course-preview img {
-    display: block;
-    min-height: 100%;
-    width: 100%;
-  }
-
-
-  /* ---------------------------------------------------------------------- */
   .ecampus-title {
     transition: all .5s ease-in-out;
     display: flex;
@@ -164,13 +142,6 @@ from openedx.core.djangolib.markup import HTML, Text
     font-weight: lighter;
     font-size: smaller;
     margin-top: 5px;
-  }
-  .learn-more {
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #999;
-    background-color: #f1f1f1;
   }
 
 </style>
