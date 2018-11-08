@@ -30,21 +30,20 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .course:hover .learn-more {
-    transition: inherit;
+    display: block;
+    border-top: 1px solid #999;
+    text-align: center;
     background-image: linear-gradient(-45deg, #14b53a, #fcd116, #ce1126);
     width: 80%;
     margin: auto !important;
     text-align: center !important;
     border-radius: 3px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
   .learn-more {
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #999;
-    background-color: #f1f1f1;
+    display: none;
   }
 
 
