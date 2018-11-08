@@ -10,7 +10,8 @@ from openedx.core.djangolib.markup import HTML, Text
 <style>
 
   /* -------- shit that works ----------------- */
-  .course:hover .course-image .cover-image {
+  .course:hover {
+    transition: all .5s ease-in-out !important;
   }
 
   .course-description {
@@ -19,7 +20,7 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .course:hover .course-description {
-    transition: all .5s ease-in-out;
+    transition: inherit;
     display: block;
     color: inherit;
   }
@@ -29,11 +30,11 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .course:hover .learn-more {
-    background-color: inherit;
+    transition: inherit;
     background-image: linear-gradient(-45deg, #14b53a, #fcd116, #ce1126);
     width: 80%;
-    margin: auto;
-    text-align: center;
+    margin: auto !important;
+    text-align: center !important;
     border-radius: 3px;
   }
 
