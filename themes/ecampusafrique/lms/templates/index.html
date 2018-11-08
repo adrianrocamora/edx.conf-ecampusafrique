@@ -15,17 +15,17 @@ from openedx.core.djangolib.markup import HTML, Text
 
   .course-description {
     display: none;
-    height: 0;
+    color: #fff;
   }
 
   .course:hover .course-description {
     transition: all .5s ease-in-out;
     display: block;
-    height: inherit;
+    color: inherit;
   }
 
   .course:hover .course-organization, .course:hover .course-name {
-    display: none;
+    display: none !important;
   }
 
   /* -------- shit that works ----------------- */
