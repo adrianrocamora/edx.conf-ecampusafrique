@@ -5,77 +5,96 @@
   <title>Title Goes Here</title>
 </head>
 <style>
-  .estrellas {
+  h1 {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+    border-bottom: 1px solid gray;
+  }
+
+  .logo-box {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: #f1f1f1;
+    overflow: clipped;
+    margin: auto;
+    text-align: center;
+    vertical-align: center;
+  }
+  .logo-character {
     position: relative;
-    width: 520px;
-    height:300px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    margin: -50% auto;
     font-size: 70px;
   }
-  .estrellas span {
+  .logo-character span {
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 70px;
     height: 300px;
     margin-left: -35px;
-    line-height: 530px; /* height*2 - font-size */
+    line-height: 250px;
     text-align: center;
     transform-origin: top center;
   }
-  .estrellas span:nth-of-type(1)  {
+  .logo-character span:nth-of-type(1)  {
     transform: rotate(75deg);
   }
-  .estrellas span:nth-of-type(2)  {
+  .logo-character span:nth-of-type(2)  {
     transform: rotate(50deg);
   }
-  .estrellas span:nth-of-type(3)  {
+  .logo-character span:nth-of-type(3)  {
     transform: rotate(25deg);
   }
-  .estrellas span:nth-of-type(4)  {
+  .logo-character span:nth-of-type(4)  {
     transform: rotate(0deg);
   }
-  .estrellas span:nth-of-type(5)  {
+  .logo-character span:nth-of-type(5)  {
     transform: rotate(-25deg);
   }
-  .estrellas span:nth-of-type(6)  {
+  .logo-character span:nth-of-type(6)  {
     transform: rotate(-50deg);
   }
-  .estrellas span:nth-of-type(7)  {
+  .logo-character span:nth-of-type(7)  {
     transform: rotate(-75deg);
   }
   /* Reverse mode */
-  .inverso {
+  .span-inverted {
     font-weight: bold;
   }
-  .inverso span {
+  .span-inverted span {
     line-height: 70px;
     transform-origin: bottom center;
     border: 1px solid red; /* Only for seeing trick */
   }
 </style>
 <body>
-  <p>This is my web page</p>
+  <h1>Circular Text</h1>
 
-  <div class="estrellas inverso">
-    <span>s</span>
-    <span>u</span>
-    <span>p</span>
-    <span>m</span>
-    <span>a</span>
-    <span>c</span>
-    <span>E</span>
-  </div>
+  <div class="logo-box">
+    <div class="logo-character span-inverted">
+      <span>s</span>
+      <span>u</span>
+      <span>p</span>
+      <span>m</span>
+      <span>a</span>
+      <span>c</span>
+      <span>E</span>
+    </div>
 
-
-  <div class="estrellas">
-    <span>A</span>
-    <span>f</span>
-    <span>r</span>
-    <span>i</span>
-    <span>q</span>
-    <span>u</span>
-    <span>e</span>
+    <div class="logo-character">
+      <span>A</span>
+      <span>f</span>
+      <span>r</span>
+      <span>i</span>
+      <span>q</span>
+      <span>u</span>
+      <span>e</span>
+    </div>
   </div>
 
 </body>
