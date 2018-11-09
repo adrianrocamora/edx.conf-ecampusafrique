@@ -2,97 +2,125 @@
 <html lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Title Goes Here</title>
+  <title>Circular</title>
 </head>
 <style>
-  h1 {
-    margin: auto;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 50px;
-    border-bottom: 1px solid gray;
-  }
+  /*
+  $green: #14b53a;      // Mali flag green
+  $yellow: #fcd116;     // Mali flag yellow
+  $red: #ce1126;        // Mali flag red
 
+  */
   .logo-container {
     width: 50%;
-    height: 50vh;
-    border: 1px solid black;
+    padding-top: 50%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+    border: .25px solid #e1e1e1;
+    border-radius: 1% 0 1% 0;
     background-color: #f1f1f1;
     margin: auto;
+    background-image: url("/Users/mcdaniel/github/edx.config-mali/themes/ecampusafrique/lms/static/images/africa-map.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+transition: all 1.5s cubic-bezier(.25,.8,.25,1);
+    }
+  .logo-container:hover {
+    transform:scale(1.025);
+    border-color: rgba(252, 209, 22, 1);
+    border-radius: 20% 0 20% 0;
+    background-color: rgba(252, 209, 22, .25);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+    background-image: url("/Users/mcdaniel/github/edx.config-mali/themes/ecampusafrique/lms/static/images/africa-map-green.svg");
   }
+
+  .logo-container:hover .logo-text {
+    transition-duration: 1s;
+    font-size: 11vh;
+  }
+
+  .logo-container:hover .land {
+    color: black;
+  }
+
   .logo-text {
     position: relative;
-    width: 100%;
-    height: 50%;
-    margin: 0 auto;
-    font-size: 5vh;
-    margin-right: 10%;
-    line-height: 20vh;
+    width: 85%;
+    height: 40%;
+    margin: 10% auto;
+    font-size: 10vh;
+    line-height: 50vh;
   }
   .logo-text span {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: 11.5%;
-    margin-left: calc(lineheight / 2);
+    left: 45%;
+    width: 20%;
     text-align: center;
     transform-origin: top center;
-    border: 1px solid green;
+    border: .25px dotted #999;
   }
 
   /* Reverse mode */
   .span-inverted span {
     transform-origin: bottom center;
-    border: 1px solid red; /* Only for seeing trick */
+  }
+
+  .logo-ecampus {}
+  .logo-afrique {
+    margin-top: 25vh;
+  }
+
+  .logo-text span:nth-of-type(1)  { transform: rotate(66deg);  }
+  .logo-text span:nth-of-type(2)  { transform: rotate(44deg);  }
+  .logo-text span:nth-of-type(3)  { transform: rotate(22deg);  }
+  .logo-text span:nth-of-type(4)  { transform: rotate(0deg);   }
+  .logo-text span:nth-of-type(5)  { transform: rotate(-22deg); }
+  .logo-text span:nth-of-type(6)  { transform: rotate(-44deg); }
+  .logo-text span:nth-of-type(7)  { transform: rotate(-66deg); }
+
+  .one-to-one-aspect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  h1 {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #666;
   }
 
 
-  .logo-text span:nth-of-type(1)  {
-    transform: rotate(60deg);
-  }
-  .logo-text span:nth-of-type(2)  {
-    transform: rotate(40deg);
-  }
-  .logo-text span:nth-of-type(3)  {
-    transform: rotate(20deg);
-  }
-  .logo-text span:nth-of-type(4)  {
-    transform: rotate(0deg);
-  }
-  .logo-text span:nth-of-type(5)  {
-    transform: rotate(-20deg);
-  }
-  .logo-text span:nth-of-type(6)  {
-    transform: rotate(-40deg);
-  }
-  .logo-text span:nth-of-type(7)  {
-    transform: rotate(-60deg);
-  }
 </style>
 <body>
   <h1>Circular Text</h1>
 
   <div class="logo-container">
-    <div class="logo-text span-inverted">
-      <span>s</span>
-      <span>u</span>
-      <span>p</span>
-      <span>m</span>
-      <span>a</span>
-      <span>c</span>
-      <span>E</span>
+    <div class="one-to-one-aspect">
+      <div class="logo-text span-inverted logo-ecampus">
+        <span>s</span>
+        <span>u</span>
+        <span>p</span>
+        <span>m</span>
+        <span>a</span>
+        <span>c</span>
+        <span>E</span>
+      </div>
+      <div class="logo-text logo-afrique">
+        <span>A</span>
+        <span>f</span>
+        <span>r</span>
+        <span>i</span>
+        <span>q</span>
+        <span>u</span>
+        <span>e</span>
+      </div>
     </div>
-
-    <div class="logo-text">
-      <span>A</span>
-      <span>f</span>
-      <span>r</span>
-      <span>i</span>
-      <span>q</span>
-      <span>u</span>
-      <span>e</span>
     </div>
-  </div>
 
 </body>
 </html>
