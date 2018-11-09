@@ -13,70 +13,67 @@
     border-bottom: 1px solid gray;
   }
 
-  .logo-box {
-    width: 500px;
-    height: 500px;
+  .logo-container {
+    width: 50%;
+    height: 50vh;
     border: 1px solid black;
     background-color: #f1f1f1;
-    overflow: clipped;
     margin: auto;
-    text-align: center;
-    vertical-align: center;
   }
-  .logo-character {
+  .logo-text {
     position: relative;
     width: 100%;
-    height: 100%;
-    margin: -50% auto;
-    font-size: 70px;
+    height: 50%;
+    margin: 0 auto;
+    font-size: 5vh;
+    margin-right: 10%;
+    line-height: 20vh;
   }
-  .logo-character span {
+  .logo-text span {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 70px;
-    height: 300px;
-    margin-left: -35px;
-    line-height: 250px;
+    width: 11.5%;
+    margin-left: calc(lineheight / 2);
     text-align: center;
     transform-origin: top center;
+    border: 1px solid green;
   }
-  .logo-character span:nth-of-type(1)  {
-    transform: rotate(75deg);
-  }
-  .logo-character span:nth-of-type(2)  {
-    transform: rotate(50deg);
-  }
-  .logo-character span:nth-of-type(3)  {
-    transform: rotate(25deg);
-  }
-  .logo-character span:nth-of-type(4)  {
-    transform: rotate(0deg);
-  }
-  .logo-character span:nth-of-type(5)  {
-    transform: rotate(-25deg);
-  }
-  .logo-character span:nth-of-type(6)  {
-    transform: rotate(-50deg);
-  }
-  .logo-character span:nth-of-type(7)  {
-    transform: rotate(-75deg);
-  }
+
   /* Reverse mode */
-  .span-inverted {
-    font-weight: bold;
-  }
   .span-inverted span {
-    line-height: 70px;
     transform-origin: bottom center;
     border: 1px solid red; /* Only for seeing trick */
+  }
+
+
+  .logo-text span:nth-of-type(1)  {
+    transform: rotate(60deg);
+  }
+  .logo-text span:nth-of-type(2)  {
+    transform: rotate(40deg);
+  }
+  .logo-text span:nth-of-type(3)  {
+    transform: rotate(20deg);
+  }
+  .logo-text span:nth-of-type(4)  {
+    transform: rotate(0deg);
+  }
+  .logo-text span:nth-of-type(5)  {
+    transform: rotate(-20deg);
+  }
+  .logo-text span:nth-of-type(6)  {
+    transform: rotate(-40deg);
+  }
+  .logo-text span:nth-of-type(7)  {
+    transform: rotate(-60deg);
   }
 </style>
 <body>
   <h1>Circular Text</h1>
 
-  <div class="logo-box">
-    <div class="logo-character span-inverted">
+  <div class="logo-container">
+    <div class="logo-text span-inverted">
       <span>s</span>
       <span>u</span>
       <span>p</span>
@@ -86,7 +83,7 @@
       <span>E</span>
     </div>
 
-    <div class="logo-character">
+    <div class="logo-text">
       <span>A</span>
       <span>f</span>
       <span>r</span>
