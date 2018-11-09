@@ -12,8 +12,8 @@
 
   */
   .logo-container {
-    width: 50%;
-    padding-top: 50%; /* 1:1 Aspect Ratio */
+    width: 75px;
+    height: 75px;
     position: relative; /* If you want text inside of it */
     border: .25px solid #e1e1e1;
     border-radius: 1% 0 1% 0;
@@ -22,24 +22,22 @@
     background-image: url("lms/static/images/africa-map.svg");
     background-repeat: no-repeat;
     background-size: contain;
-transition: all 1.5s cubic-bezier(.25,.8,.25,1);
+    transition: all 1.5s cubic-bezier(.25,.8,.25,1);
     }
   .logo-container:hover {
     transform:scale(1.025);
     border-color: rgba(252, 209, 22, 1);
     border-radius: 20% 0 20% 0;
     background-color: rgba(252, 209, 22, .25);
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
     background-image: url("lms/static/images/africa-map-green.svg");
   }
 
   .logo-container:hover .logo-text {
     transition-duration: 1s;
+    /*
     font-size: 11vh;
-  }
-
-  .logo-container:hover .land {
-    color: black;
+    */
   }
 
   .logo-text {
@@ -48,8 +46,8 @@ transition: all 1.5s cubic-bezier(.25,.8,.25,1);
     width: 85%;
     height: 40%;
     margin: 10% auto;
-    font-size: 10vh;
-    line-height: 50vh;
+    font-size: 15px;
+    line-height: 75px;
   }
   .logo-text span {
     position: absolute;
@@ -58,7 +56,7 @@ transition: all 1.5s cubic-bezier(.25,.8,.25,1);
     width: 20%;
     text-align: center;
     transform-origin: top center;
-    border: .25px dotted #999;
+    /* border: .25px dotted #999; */
   }
 
   /* Reverse mode */
@@ -66,18 +64,20 @@ transition: all 1.5s cubic-bezier(.25,.8,.25,1);
     transform-origin: bottom center;
   }
 
-  .logo-ecampus {}
+  .logo-ecampus {
+    margin-top: 15px;
+  }
   .logo-afrique {
-    margin-top: 25vh;
+    margin-top: 30px;
   }
 
-  .logo-text span:nth-of-type(1)  { transform: rotate(66deg);  }
-  .logo-text span:nth-of-type(2)  { transform: rotate(44deg);  }
-  .logo-text span:nth-of-type(3)  { transform: rotate(22deg);  }
+  .logo-text span:nth-of-type(1)  { transform: rotate(51deg);  }
+  .logo-text span:nth-of-type(2)  { transform: rotate(34deg);  }
+  .logo-text span:nth-of-type(3)  { transform: rotate(17deg);  }
   .logo-text span:nth-of-type(4)  { transform: rotate(0deg);   }
-  .logo-text span:nth-of-type(5)  { transform: rotate(-22deg); }
-  .logo-text span:nth-of-type(6)  { transform: rotate(-44deg); }
-  .logo-text span:nth-of-type(7)  { transform: rotate(-66deg); }
+  .logo-text span:nth-of-type(5)  { transform: rotate(-17deg); }
+  .logo-text span:nth-of-type(6)  { transform: rotate(-34deg); }
+  .logo-text span:nth-of-type(7)  { transform: rotate(-51deg); }
 
   .one-to-one-aspect {
     position: absolute;
