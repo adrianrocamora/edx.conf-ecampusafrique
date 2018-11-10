@@ -17,10 +17,13 @@ from openedx.core.djangolib.markup import HTML, Text
     width: 100%;
     margin: auto;
     text-align: center;
+    transition: all 1.5s cubic-bezier(.25,.8,.25,1);
   }
   .ecampus-course:hover {
-    height: 500px;
+    transform:scale(1.025);
+    height: 425px;
     border: 1px solid red;
+    border-radius: 10% 0 10% 0;
   }
   .ecampus-course a, .ecampus-course a:hover, .ecampus-course a:active, .ecampus-course a:visited {
     text-decoration: none;
