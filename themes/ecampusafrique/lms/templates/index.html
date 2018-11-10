@@ -17,12 +17,14 @@ from openedx.core.djangolib.markup import HTML, Text
     width: 100%;
     margin: auto;
     text-align: center;
-    transition: all 1.5s cubic-bezier(.25,.8,.25,1);
+    transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+    overflow: hidden;
   }
   .ecampus-course:hover {
     transform:scale(1.025);
     height: 425px;
     border: 1px solid red;
+    box-shadow: 0 1px 10px 5px rgba(0,0,0, 0.25);
     border-radius: 10% 0 10% 0;
   }
   .ecampus-course a, .ecampus-course a:hover, .ecampus-course a:active, .ecampus-course a:visited {
@@ -60,6 +62,8 @@ from openedx.core.djangolib.markup import HTML, Text
     display: none;
   }
   .ecampus-course:hover .ecampus-learn-more {
+    transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+    transition-delay: 0.5s
     display: block;
     border-top: 1px solid #999 !important;
     color: #fff !important;
