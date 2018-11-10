@@ -58,11 +58,14 @@ from openedx.core.djangolib.markup import HTML, Text
   }
   .ecampus-course-number {}
   .ecampus-learn-more {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 20px;
+    transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+    transition-delay: 0.5s;
     display: none;
   }
   .ecampus-course:hover .ecampus-learn-more {
-    transition: all 0.75s cubic-bezier(.25,.8,.25,1);
-    transition-delay: 0.5s;
     display: block;
     border-top: 1px solid #999 !important;
     color: #fff !important;
@@ -76,8 +79,8 @@ from openedx.core.djangolib.markup import HTML, Text
     padding-top: 10px;
   }
 
-  .ecampus-sr ul {}
-  .ecampus-sr li {}
+  .ecampus-sr ul { display: none; }
+  .ecampus-sr li { display: none; }
 
 </style>
 <header>
