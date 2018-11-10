@@ -23,9 +23,8 @@
    border-radius: 0 0 8% 8%;
  }
  .ecampus-course a, .ecampus-course a:hover, .ecampus-course a:active, .ecampus-course a:visited {
-   text-decoration: none;
-   color: #333;
-
+   text-decoration: none !important;
+   color: #333 !important;
  }
  .ecampus-course-image {}
  .ecampus-cover-image {
@@ -35,6 +34,7 @@
  .ecampus-cover-image img {
    width: 100%;
    height: auto;
+   transition: all 3s cubic-bezier(.25,.8,.25,1);
  }
  .ecampus-course:hover .ecampus-cover-image img {
    opacity: 0.80;
