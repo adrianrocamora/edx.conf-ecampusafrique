@@ -15,19 +15,20 @@ from six import text_type
       </div>
     </header>
     <div class="ecampus-course-info" aria-hidden="true">
+      <%
+      if course.start is not None:
+          course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
+      else:
+          course_date_string = ''
+      %>
+      % if course.advertised_start is not None:
+          <div class="ecampus-course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
+      % else:
+          <div class="ecampus-course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
+      % endif
+
       <div class="ecampus-course-description">
         <p>${course.short_description}</p>
-        <%
-        if course.start is not None:
-            course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
-        else:
-            course_date_string = ''
-        %>
-        % if course.advertised_start is not None:
-            <div class="ecampus-course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
-        % else:
-            <div class="ecampus-course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
-        % endif
       </div>
 
       <div class="ecampus-course-organization">${course.display_org_with_default}</div>
