@@ -9,7 +9,7 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
   .ecampus-course {
-    height: 400px;
+    height: 350px;
     box-sizing: border-box;
     position: relative;
     box-shadow: 0 1px 5px 0 rgba(0,0,0, 0.125);
@@ -22,7 +22,7 @@ from openedx.core.djangolib.markup import HTML, Text
   }
   .ecampus-course:hover {
     transform:scale(1.025);
-    height: 425px;
+    height: 375px;
     box-shadow: 1px 1px 5px 1px rgba(0,0,0, 0.25);
     border-radius: 10% 0 10% 0;
   }
@@ -48,18 +48,28 @@ from openedx.core.djangolib.markup import HTML, Text
   .ecampus-course-info {}
   .ecampus-course-description {
     display: none;
-    margin: 10px 10px 25px 10px;
+    margin: 10% 5px 0px 5px;
+    font-size: 1.05em;
+    line-height: 1.15;
   }
   .ecampus-course:hover .ecampus-course-description {
     display: block;
   }
 
   .ecampus-course-date {
-    margin: 25px;
-    border-bottom: 1px solid gray;
+    display: none;
+    margin: 0 5px 25px 5px;
+    border-bottom: 1px solid #ce1126;     /* Mali red */
     padding: 5px;
-    color: #888;
+    color: #333;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: small;
   }
+  .ecampus-course:hover .ecampus-course-date {
+    display: block;
+  }
+
   .ecampus-course-organization {
     margin: 30% 0 5% 0;
     font-size: 1.25em;
