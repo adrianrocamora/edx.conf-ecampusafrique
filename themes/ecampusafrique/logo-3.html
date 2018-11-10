@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Circular</title>
+</head>
+<style>
+.logo-container {
+  width: 375px;
+  height: 375px;
+  position: relative; /* If you want text inside of it */
+  border: .25px solid #e1e1e1;
+  border-radius: 5%;
+  background-color: #fff;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 1.5s cubic-bezier(.25,.8,.25,1);
+  background-image: url('lms/static/images/africa-map-green.svg');
+}
+
+
+.logo-container:hover {
+  transform:scale(1.025);
+  background-image: url('lms/static/images/africa-map.svg');
+}
+
+
+
+</style>
+<body>
+  <h1>Logo 3</h1>
+  <div class="logo-container"></div>
+</body>
+</html>

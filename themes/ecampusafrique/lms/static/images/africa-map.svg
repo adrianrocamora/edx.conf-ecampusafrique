@@ -59,7 +59,7 @@ svg:hover .land {
 
 .ml {
   opacity:    1;
-  fill:       rgba(20, 181, 58, 0.25); /* Mali Green */
+  fill:       rgba(20, 181, 58, 1); /* Mali Green */
 }
 
 
