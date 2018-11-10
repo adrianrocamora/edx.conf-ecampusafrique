@@ -9,9 +9,8 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
 
-  /* -------- shit that works ----------------- */
-  .course:hover {
-    transition: all .5s ease-in-out !important;
+  .course {
+    transition: all 1.5s cubic-bezier(.25,.8,.25,1);
   }
 
   .course-description {
@@ -20,7 +19,6 @@ from openedx.core.djangolib.markup import HTML, Text
   }
 
   .course:hover .course-description {
-    transition: inherit;
     display: block;
     color: inherit;
   }
@@ -29,6 +27,10 @@ from openedx.core.djangolib.markup import HTML, Text
     display: none !important;
   }
 
+
+  .course .learn-more {
+    display: none;
+  }
   .course:hover .learn-more {
     display: block;
     border-top: 1px solid #999 !important;
@@ -43,47 +45,6 @@ from openedx.core.djangolib.markup import HTML, Text
     padding-top: 10px;
   }
 
-  .learn-more {
-    display: none;
-  }
-
-
-  /* -------- shit that works ----------------- */
-
-  a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
-    color: #c31126;
-  }
-  .global-header .header-logo a .logo {
-    margin: 15px 0 0 20px;
-    text-decoration: none;
-  }
-
-  .global-header {
-    border-bottom: none;
-    box-shadow: none;
-  }
-  .content-wrapper {
-    margin-top: 0;
-  }
-
-  .outer-wrapper {
-    background-image: url('${static.url("images/homepage-banner.jpg")}');
-    background-color: #cccccc;
-    height: 360px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .courses-container .courses .course {
-    box-shadow:	0 0 11px 0 rgba(0,0,0,.25);
-    border-bottom: none;
-  }
-
-  .highlighted-courses .courses .course,
-  .find-courses .courses .course {
-    border: none;
-  }
 
   .course-organization {
     color: #fff !important;
@@ -120,6 +81,45 @@ from openedx.core.djangolib.markup import HTML, Text
 
   .course .course-info .course-date {
     text-align: center;
+  }
+
+  .courses-container .courses .course {
+    box-shadow:	0 0 11px 0 rgba(0,0,0,.25);
+    border-bottom: none;
+  }
+
+  .highlighted-courses .courses .course,
+  .find-courses .courses .course {
+    border: none;
+  }
+
+  /* ---------------------------------------------------------------------------
+     Header styling
+     ---------------------------------------------------------------------------*/
+
+  a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+    color: #c31126;
+  }
+  .global-header .header-logo a .logo {
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+  }
+
+  .global-header {
+    border-bottom: none;
+    box-shadow: none;
+  }
+  .content-wrapper {
+    margin-top: 0;
+  }
+
+  .outer-wrapper {
+    background-image: url('${static.url("images/homepage-banner.jpg")}');
+    background-color: #cccccc;
+    height: 360px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 </style>
