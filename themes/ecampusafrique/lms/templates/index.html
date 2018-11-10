@@ -8,9 +8,22 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
-  .ecampus-course {}
+  .ecampus-course {
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0, 0.125);
+    background: #fff;
+    width: 100%;
+  }
   .ecampus-course-image {}
-  .ecampus-cover-image {}
+  .ecampus-cover-image {
+    height: 160px;
+    overflow: hidden;
+  }
+  .ecampus-cover-image img {
+    width: 100%;
+    height: auto;
+  }
   .ecampus-course-info {}
   .ecampus-course-description {}
   .ecampus-course-description {}
