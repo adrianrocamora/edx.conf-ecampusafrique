@@ -34,7 +34,8 @@
  .ecampus-cover-image img {
    width: 100%;
    height: auto;
-   transition: all 3s cubic-bezier(.25,.8,.25,1);
+   transition: all 2.5s cubic-bezier(.25,.8,.25,1);
+   transition-delay: 1s;
  }
  .ecampus-course:hover .ecampus-cover-image img {
    opacity: 0.80;
