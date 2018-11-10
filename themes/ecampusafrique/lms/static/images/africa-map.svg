@@ -43,14 +43,7 @@
 }
 
 
-/*
- * Land
- */
-.land
-{
-  /*
-   fill: #14b53a;
-   */
+.land {
    fill: #ccc;
    fill-opacity: 1;
    stroke:white;
@@ -60,9 +53,18 @@
    stroke-dasharray: none;
 }
 
+svg:hover .land {
+   fill: #14b53a;
+}
+
+.ml {
+  opacity:    1;
+  fill:       rgba(20, 181, 58, 0.25); /* Mali Green */
+}
+
+
 /*
  * Styles for coastlines of islands with no borders
- */
 .coast
 {
    stroke-width: 0.3;
@@ -73,6 +75,7 @@
   opacity: 1;
    fill:   red;
 }
+*/
 
 
 /*
