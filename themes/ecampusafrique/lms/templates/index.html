@@ -8,119 +8,20 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 <style>
+  .ecampus-course {}
+  .ecampus-course-image {}
+  .ecampus-cover-image {}
+  .ecampus-course-info {}
+  .ecampus-course-description {}
+  .ecampus-course-description {}
+  .ecampus-course-date {}
+  .ecampus-course-organization {}
+  .ecampus-course-name {}
+  .ecampus-course-number {}
+  .ecampus-learn-more {}
 
-  .course {
-    transition: all 1.5s cubic-bezier(.25,.8,.25,1);
-  }
-
-  .course-description {
-    display: none;
-    color: #fff;
-  }
-
-  .course:hover .course-description {
-    display: block;
-    color: inherit;
-  }
-
-  .course:hover .course-organization, .course:hover .course-name {
-    display: none !important;
-  }
-
-
-  .course .learn-more {
-    display: none;
-  }
-  .course:hover .learn-more {
-    display: block;
-    border-top: 1px solid #999 !important;
-    color: #fff !important;
-    text-align: center;
-    background-image: linear-gradient(-45deg, #ce1126, #fcd116, #14b53a);
-    width: 80%;
-    margin: auto !important;
-    text-align: center !important;
-    border-radius: 3px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-
-
-  .course-organization {
-    color: #fff !important;
-    margin: auto;
-    text-align: center;
-    background-image: linear-gradient(-45deg, #ce1126, #fcd116, #14b53a);
-    width: 80%;
-    border-radius: 3px;
-  }
-
-  .course-name {
-      font-size: smaller;
-      font-weight: 600;
-      color: #405060;
-      text-align: center !important;
-      margin-top: 10px !important;
-  }
-  .course-number {
-    font-size: x-small;
-    font-weight: lighter;
-    font-style: italic;
-  }
-
-  .course-description p {
-    color: #666;
-    margin: 5px;
-    font-weight: lighter;
-    font-size: medium;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: normal;
-    text-align: center;
-  }
-
-  .course .course-info .course-date {
-    text-align: center;
-  }
-
-  .courses-container .courses .course {
-    box-shadow:	0 0 11px 0 rgba(0,0,0,.25);
-    border-bottom: none;
-  }
-
-  .highlighted-courses .courses .course,
-  .find-courses .courses .course {
-    border: none;
-  }
-
-  /* ---------------------------------------------------------------------------
-     Header styling
-     ---------------------------------------------------------------------------*/
-
-  a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
-    color: #c31126;
-  }
-  .global-header .header-logo a .logo {
-    margin: 15px 0 0 20px;
-    text-decoration: none;
-  }
-
-  .global-header {
-    border-bottom: none;
-    box-shadow: none;
-  }
-  .content-wrapper {
-    margin-top: 0;
-  }
-
-  .outer-wrapper {
-    background-image: url('${static.url("images/homepage-banner.jpg")}');
-    background-color: #cccccc;
-    height: 360px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  .ecampus-sr ul {}
+  .ecampus-sr li {}
 
 </style>
 <header>
