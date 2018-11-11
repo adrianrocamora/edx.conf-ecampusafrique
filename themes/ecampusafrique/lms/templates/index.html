@@ -33,6 +33,12 @@ from openedx.core.djangolib.markup import HTML, Text
    background-size: cover;
  }
 
+ @media only screen and (max-width : 991px) {
+   /* hide hero header image */
+   .outer-wrapper {
+     display: none !important;
+   }
+ }
 </style>
 
 <header>
