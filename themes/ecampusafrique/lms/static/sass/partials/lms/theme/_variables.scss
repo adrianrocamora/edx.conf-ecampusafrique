@@ -3,12 +3,11 @@
 
 /* McDaniel Nov-2018: custom colors. */
 // Bootstrap theme colors from $theme-colors
-$green: #14b53a;      // Mali flag green
+$green: rgba(20, 181, 58, 0.5);      // Mali flag green
 $yellow: #fcd116;     // Mali flag yellow
 $red: #ce1126;        // Mali flag red
 
-//$primary: $red;
-$secondary: $red;
+$primary: $green;
 
 // This belongs at the bottom of file, i guess?
 @import 'edx-bootstrap/sass/open-edx/theme';
