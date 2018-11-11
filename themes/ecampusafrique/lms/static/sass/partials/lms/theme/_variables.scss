@@ -7,7 +7,8 @@ $green: #14b53a;      // Mali flag green
 $yellow: #fcd116;     // Mali flag yellow
 $red: #ce1126;        // Mali flag red
 
-$primary: $red;
+//$primary: $red;
+$secondary: $red;
 
 // This belongs at the bottom of file, i guess?
 @import 'edx-bootstrap/sass/open-edx/theme';
