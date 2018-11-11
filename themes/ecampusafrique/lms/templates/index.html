@@ -104,12 +104,28 @@ from openedx.core.djangolib.markup import HTML, Text
 
    /* Small devices */
    @media only screen and (max-width : 991px) {
+     /* mobile menu items: blut to gray */
      .mobile-menu .mobile-nav-link a {
        color: #666 !important;
      }
+
+     /* mobile logo: kill bottom margin */
+     .global-header .header-logo h1 {
+       margin-bottom: 0 !important;
+     }
+
+     /* mobile logo: shrink size from 75px */
+     .logo-container {
+       width: 45px !important;
+       height: 45px !important;
+     }
+
+     /* course card: reduce margin-top from 30% */
      .ecampus-course-organization {
        margin: 10% 0 5% 0 !important;
      }
+
+     /* course card: force "learn more" button to appear */
      .ecampus-learn-more {
        display: block !important;
      }
@@ -119,36 +135,47 @@ from openedx.core.djangolib.markup import HTML, Text
 
    /* Medium Devices, Desktops */
    @media only screen and (min-width : 992px) {
+
+     /* increase height of course card by 25px */
      .ecampus-course:hover {
        transform:scale(1.05);
        height: 375px;
        box-shadow: 1px 1px 5px 1px rgba(0,0,0, 0.25);
        border-radius: 0 0 8% 8%;
      }
+
+     /* Blur the course card image  */
      .ecampus-course:hover .ecampus-cover-image img {
        opacity: 0.80;
-       filter: blur(2px);
+       filter: blur(1px);
      }
 
+     /* force the course card detail description to appear */
      .ecampus-course:hover .ecampus-course-description {
        display: block;
      }
 
+     /* force the course date to appear */
      .ecampus-course:hover .ecampus-course-date {
        display: block;
      }
 
+     /* hide the course card organization name */
      .ecampus-course:hover .ecampus-course-organization {
        display: none;
      }
 
+     /* hide the course card course name */
      .ecampus-course:hover .ecampus-course-name {
        display: none;
      }
 
+     /* hide the course card course number */
      .ecampus-course:hover .ecampus-course-number {
        display: none;
      }
+
+     /* force the "learn more" button to appear */
      .ecampus-course:hover .ecampus-learn-more {
        display: block;
      }
