@@ -7,6 +7,34 @@ from django.urls import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
+
+<style>
+  .global-header .header-logo a .logo {
+   height: 50px !important;
+ }
+ .global-header .header-logo a {
+   text-decoration: none;
+ }
+
+ .global-header {
+   border-bottom: none;
+   box-shadow: none;
+ }
+ .content-wrapper {
+   margin-top: 0;
+ }
+
+ .outer-wrapper {
+   background-image: url('${static.url("images/homepage-banner.jpg")}');
+   background-color: #cccccc;
+   height: 360px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+</style>
+
 <header>
   <div class="outer-wrapper">
   </div>
