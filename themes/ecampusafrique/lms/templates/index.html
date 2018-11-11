@@ -51,8 +51,10 @@ from openedx.core.djangolib.markup import HTML, Text
    .ecampus-course-description {
      display: none;
      margin: 10% 5px 0px 5px;
-     font-size: 1.05em;
      line-height: 1.15;
+     font-family: sans-serif;
+     font-weight: 100;
+     font-size: smaller;
    }
 
    .ecampus-course-date {
@@ -82,7 +84,7 @@ from openedx.core.djangolib.markup import HTML, Text
      transition-delay: 0.5s;
      display: none;
      position: absolute;
-     bottom: 5px;
+     bottom: 3.5%;
      left: 15%;
      border: 1px solid #ce1126;
      color: #fff;
@@ -102,6 +104,9 @@ from openedx.core.djangolib.markup import HTML, Text
 
    /* Small devices */
    @media only screen and (max-width : 991px) {
+     .mobile-menu .mobile-nav-link a {
+       color: #666 !important;
+     }
      .ecampus-course-organization {
        margin: 10% 0 5% 0 !important;
      }
