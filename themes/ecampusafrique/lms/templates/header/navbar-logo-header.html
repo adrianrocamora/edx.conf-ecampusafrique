@@ -38,12 +38,17 @@ from branding import api as branding_api
     left: 0;
     width: 100%;
     text-align: center;
-    margin-top: 3%;
+    margin-top: 15px;
     margin-left: 3%;
   }
 
   /* Medium Devices, Desktops */
-  @media only screen and (min-width : 992px) {
+  @media only screen and (max-width : 992px) {
+    a, a:hover, a:active, a:visited {
+      text-decoration: none !important;
+      color: #333 !important;
+    }
+
     .logo-title {
       display: block !important;
     }
