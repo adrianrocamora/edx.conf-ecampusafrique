@@ -31,8 +31,10 @@ from branding import api as branding_api
     background-image: url('${static.url("images/africa-map.svg")}');
   }
 
-  .logo-title {
+  .logo-title, .logo-title:hover, .logo-title:active, .logo-title:visited {
     display: none;
+    text-decoration: none !important;
+    color: #ce1126;
     position: absolute;
     top:  0;
     left: 0;
@@ -44,11 +46,6 @@ from branding import api as branding_api
 
   /* Medium Devices, Desktops */
   @media only screen and (max-width : 992px) {
-    a, a:hover, a:active, a:visited {
-      text-decoration: none !important;
-      color: #333 !important;
-    }
-
     .logo-title {
       display: block !important;
     }
