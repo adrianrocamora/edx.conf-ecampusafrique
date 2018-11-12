@@ -3,15 +3,23 @@
 
 /* McDaniel Nov-2018: custom colors. */
 // Bootstrap theme colors from $theme-colors
+
+
 //#14b53a;      // Mali flag green
 //rgba(20, 181, 58, 0.5)    // Mali green w alpha
 //#2A5925       // dark forest green
 
-$green: #2A5925;      // Mali flag green w alpha
+$dark-green: #2A5925;
 $yellow: #fcd116;     // Mali flag yellow
 $red: #ce1126;        // Mali flag red
 
-$primary: $green;
+$primary: $dark-green;
+
+// Add modified theme colors to Bootstrap theme-color array
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+);
 
 // This belongs at the bottom of file, i guess?
 @import 'edx-bootstrap/sass/open-edx/theme';
