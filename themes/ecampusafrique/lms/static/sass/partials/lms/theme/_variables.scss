@@ -3,7 +3,11 @@
 
 /* McDaniel Nov-2018: custom colors. */
 // Bootstrap theme colors from $theme-colors
-$green: rgba(20, 181, 58, 0.5);      // Mali flag green
+//#14b53a;      // Mali flag green
+//rgba(20, 181, 58, 0.5)    // Mali green w alpha
+//#2A5925       // dark forest green
+
+$green: #2A5925;      // Mali flag green w alpha
 $yellow: #fcd116;     // Mali flag yellow
 $red: #ce1126;        // Mali flag red
 
