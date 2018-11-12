@@ -17,8 +17,7 @@ $primary: $dark-green;
 
 // Add modified theme colors to Bootstrap theme-color array
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary
+  "primary": $primary
 );
 
 $m-blue: theme-color("primary"); // mali dark green
