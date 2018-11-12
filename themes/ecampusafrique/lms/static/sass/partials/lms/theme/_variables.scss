@@ -20,7 +20,7 @@ $theme-colors: (
   "primary": $primary
 );
 
-$m-blue: theme-color("primary"); // mali dark green
+$m-blue: #2A5925;                 // mali dark green
 $m-blue-s1: #14b53a;             // mali green
 $m-blue-l1: tint($m-blue, 20%);
 $m-blue-l2: tint($m-blue, 40%);
