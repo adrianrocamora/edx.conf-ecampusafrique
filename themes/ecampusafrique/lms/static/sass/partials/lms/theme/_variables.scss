@@ -9,38 +9,11 @@
 //rgba(20, 181, 58, 0.5)    // Mali green w alpha
 //#2A5925       // dark forest green
 
-$dark-green: #2A5925;
-$yellow: #fcd116;     // Mali flag yellow
-$red: #ce1126;        // Mali flag red
+//$green: #2A5925;
+//$yellow: #fcd116;     // Mali flag yellow
+//$red: #ce1126;        // Mali flag red
 
-$primary: $dark-green;
-
-// Add modified theme colors to Bootstrap theme-color array
-$theme-colors: (
-  "primary": $primary
-);
-
-$m-blue: #2A5925;                 // mali dark green
-$m-blue-s1: #14b53a;             // mali green
-$m-blue-l1: tint($m-blue, 20%);
-$m-blue-l2: tint($m-blue, 40%);
-$m-blue-l3: tint($m-blue, 60%);
-$m-blue-l4: tint($m-blue, 90%);
-$m-blue-l5: tint($m-blue, 95%);
-$m-blue-l6: tint($m-blue, 100%);
-
-$m-blue-d1: shade($m-blue, 20%);
-$m-blue-d2: shade($m-blue, 40%);
-$m-blue-d3: shade($m-blue, 60%);
-$m-blue-d4: shade($m-blue, 80%);
-$m-blue-d5: shade($m-blue, 90%);
-$m-blue-d6: shade($m-blue, 100%);
-
-$m-blue-t0: rgba($m-blue, 0.125);
-$m-blue-t1: rgba($m-blue, 0.25);
-$m-blue-t2: rgba($m-blue, 0.5);
-$m-blue-t3: rgba($m-blue, 0.75);
-
+$primary: #2A5925;
 
 
 
