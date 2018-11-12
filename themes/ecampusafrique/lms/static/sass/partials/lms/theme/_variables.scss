@@ -21,5 +21,27 @@ $theme-colors: (
   "secondary": $secondary
 );
 
+$m-blue: theme-color("primary");  // uxpl blue base
+$m-blue-l1: tint($m-blue, 75%);
+$m-blue-l2: tint($m-blue, 80%);
+$m-blue-l3: tint($m-blue, 85%);
+$m-blue-l4: tint($m-blue, 90%);
+$m-blue-l5: tint($m-blue, 95%);
+$m-blue-l6: tint($m-blue, 100%);;
+
+$m-blue-d1: rgba(20, 181, 58, 1.00);
+$m-blue-d2: rgba(20, 181, 58, .95);
+$m-blue-d3: rgba(20, 181, 58, .90);
+$m-blue-d4: rgba(20, 181, 58, .85);
+$m-blue-d5: rgba(20, 181, 58, .80);
+$m-blue-d6: rgba(20, 181, 58, .75);
+
+$m-blue-t0: rgba($m-blue, 0.125);
+$m-blue-t1: rgba($m-blue, 0.25);
+$m-blue-t2: rgba($m-blue, 0.5);
+$m-blue-t3: rgba($m-blue, 0.75);
+
+
+
 // This belongs at the bottom of file, i guess?
 @import 'edx-bootstrap/sass/open-edx/theme';
