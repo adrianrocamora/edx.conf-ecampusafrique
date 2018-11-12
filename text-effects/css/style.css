@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:700");
+:root {
+  --font-size: 3rem;
+}
+@media (min-width: 768px) {
+  :root {
+    --font-size: 5rem;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.page {
+  height: 100vh;
+  overflow: auto;
+}
+.char {
+  text-transform: uppercase;
+}
+.text__container {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: var(--font-size);
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  font-weight: 300;
+  text-align: center;
+  width: 100vw;
+}
+.text__container:nth-child(n) {
+  background: #4d05e8;
+}
+.text__container:nth-child(2n) {
+  background: #00b5cc;
+}
+.text__container:nth-child(3n) {
+  background: #446cb3;
+}
+.cascade {
+  display: grid;
+  grid-auto-rows: auto;
+}
+.cascade .word {
+  --chars: 7;
+  --center: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--chars), auto);
+}
+.cascade[data-scroll="in"] .char {
+  -webkit-animation-delay: calc(0.25s + (var(--word-index) * 0.1s));
+          animation-delay: calc(0.25s + (var(--word-index) * 0.1s));
+  -webkit-animation-name: bloat;
+          animation-name: bloat;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.cascade .char {
+  --offset: calc((var(--char-index) - (var(--chars) * var(--word-index))) - var(--center));
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+@-webkit-keyframes bloat {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(calc(var(--offset) * 150%), 0);
+            transform: translate(calc(var(--offset) * 150%), 0);
+  }
+}
+@keyframes bloat {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(calc(var(--offset) * 150%), 0);
+            transform: translate(calc(var(--offset) * 150%), 0);
+  }
+}
+.slots {
+  height: calc(var(--font-size) * 3);
+  overflow: hidden;
+}
+.slots .char {
+  text-shadow: 0 calc(var(--font-size) * -1) 0 #fff, 0 calc(var(--font-size) * -2) 0 #fff, 0 calc(var(--font-size) * -3) 0 #fff, 0 calc(var(--font-size) * 1) 0 #fff, 0 calc(var(--font-size) * 2) 0 #fff, 0 calc(var(--font-size) * 3) 0 #fff;
+}
+.slots .char:nth-of-type(even) {
+  -webkit-animation: scrollDown 0.5s 0.25s infinite linear;
+          animation: scrollDown 0.5s 0.25s infinite linear;
+}
+.slots .char:nth-of-type(odd) {
+  -webkit-animation: scrollUp 0.5s 0.25s infinite linear;
+          animation: scrollUp 0.5s 0.25s infinite linear;
+}
+@-webkit-keyframes scrollUp {
+  to {
+    -webkit-transform: translate(0, calc(var(--font-size) * -1));
+            transform: translate(0, calc(var(--font-size) * -1));
+  }
+}
+@keyframes scrollUp {
+  to {
+    -webkit-transform: translate(0, calc(var(--font-size) * -1));
+            transform: translate(0, calc(var(--font-size) * -1));
+  }
+}
+@-webkit-keyframes scrollDown {
+  to {
+    -webkit-transform: translate(0, calc(var(--font-size) * 1));
+            transform: translate(0, calc(var(--font-size) * 1));
+  }
+}
+@keyframes scrollDown {
+  to {
+    -webkit-transform: translate(0, calc(var(--font-size) * 1));
+            transform: translate(0, calc(var(--font-size) * 1));
+  }
+}
+.carousel {
+  height: var(--font-size);
+  width: var(--font-size);
+}
+.carousel .word {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-15deg) rotateY(0);
+          transform: rotateX(-15deg) rotateY(0);
+  height: 100%;
+  width: 100%;
+}
+.carousel .char {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) rotateY(calc(((360 / var(--char-total)) * var(--char-index)) * 1deg)) translate(var(--font-size), 0);
+          transform: translate(-50%, -50%) rotateY(calc(((360 / var(--char-total)) * var(--char-index)) * 1deg)) translate(var(--font-size), 0);
+}
+.carousel .word[data-scroll="in"] {
+  -webkit-animation: spin 2s 0.25s infinite linear;
+          animation: spin 2s 0.25s infinite linear;
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotateX(-15deg) rotateY(-360deg);
+            transform: rotateX(-15deg) rotateY(-360deg);
+  }
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotateX(-15deg) rotateY(-360deg);
+            transform: rotateX(-15deg) rotateY(-360deg);
+  }
+}
+.roulette {
+  position: relative;
+}
+.roulette .word[data-scroll='in'] {
+  -webkit-animation: rotate 2.5s 0.25s infinite linear;
+          animation: rotate 2.5s 0.25s infinite linear;
+}
+.roulette .word {
+  display: block;
+  height: 100%;
+  width: 100%;
+  height: var(--font-size);
+  width: var(--font-size);
+}
+.roulette .char {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(calc((var(--char-index) * (360 / var(--char-total)) * 1deg))) translate(0, -150%);
+          transform: translate(-50%, -50%) rotate(calc((var(--char-index) * (360 / var(--char-total)) * 1deg))) translate(0, -150%);
+}
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+.hinged [data-scroll='in'] .char {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.hinged .char {
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  transition: -webkit-transform 0.25s calc(var(--char-index) * 0.1s);
+  transition: transform 0.25s calc(var(--char-index) * 0.1s);
+  transition: transform 0.25s calc(var(--char-index) * 0.1s), -webkit-transform 0.25s calc(var(--char-index) * 0.1s);
+}
+.mexiwave [data-scroll='in'] .char {
+  -webkit-animation: wave 0.25s calc(var(--char-index) * 0.1s) ease;
+          animation: wave 0.25s calc(var(--char-index) * 0.1s) ease;
+}
+@-webkit-keyframes wave {
+  50% {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+@keyframes wave {
+  50% {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
