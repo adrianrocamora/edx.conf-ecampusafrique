@@ -9,6 +9,7 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <style>
+  /* ------------------------ Begin: Open edX styling ------------------------ */
   .global-header .header-logo a .logo {
    height: 50px !important;
  }
@@ -39,6 +40,201 @@ from openedx.core.djangolib.markup import HTML, Text
      display: none !important;
    }
  }   /* 1-column layout */
+ /* ------------------------ End: Open edX styling ------------------------ */
+
+ .home-ea-container {
+ }
+
+
+ /* ------------  Offre Découverte ---------------------  */
+ .offre-row {
+   display: flex;
+   height: 300px;
+   background: url(https://cdn.ionisx.com/images/web/home/patchwork-offer-purple.e8a8b788.svg);
+   background-size: cover;
+   background-position: center;
+   color: white;
+   font-family: Raleway,Lato,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+   margin: 25px 0 25px 0;
+   border-radius: 5px;
+   border: 1px solid #e6e6e6;
+ }
+
+ .offre-left {
+   flex: 60%;
+   margin: auto;
+   text-align: center;
+ }
+ .offre-left h3 {
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: 2.7em;
+   margin: 0;
+ }
+ .offre-left h4 {
+   font-size: 1.5em;
+   margin: 20px 0;
+   line-height: 1.2em;
+   font-weight: 300;
+ }
+ .offre-left p {
+   font-size: 1.1em;
+   font-weight: 300;
+ }
+
+ .offre-right {
+   flex: 40%;
+   margin: auto 125px auto 125px;
+   text-align: center;
+   background-color: #4cc447;
+   padding: 30px;
+   font-weight: 500;
+   font-size: 1.2em;
+   letter-spacing: 1px;
+ }
+
+ .offre-right a {
+   text-decoration: none;
+   color: white;
+ }
+
+ /* ---------------- Home Page Extra -------------------- */
+ .home-ea {
+   margin: auto;
+   padding: 0;
+   border: 1px solid #e6e6e6;
+   border-radius: 5px;
+
+   background-color: white;
+   color: #362f2d;
+
+   text-align: center;
+   font-weight: 300;
+   font-size: 20px;
+   font-family: Raleway,Lato,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+
+ }
+ .home-ea p {
+   margin-bottom: 0;
+ }
+
+ .home-ea a {
+   color: #362f2d;
+ }
+
+ .home-ea a:hover {
+   font-weight: bolder;
+ }
+
+ .home-ea-section-divider {
+   height: 50vh;
+   margin: 0 0px 0 0px;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: top center;
+ }
+
+ .divider-1 {
+   background-image: url(https://s3.eu-west-2.amazonaws.com/ecampusafrique.org/images/pretty-girl-w-phone-compressed.jpg);
+ }
+
+ .divider-2 {
+   background-image: url(https://s3.eu-west-2.amazonaws.com/ecampusafrique.org/images/pretty-girl-w-phone-compressed.jpg);
+ }
+
+
+ .home-ea-section {
+   min-height: 50vh;
+   margin: 0 0px 0 0px;
+   padding: 25px;
+   padding-bottom: 100px;
+ }
+
+ .home-ea-section-body {
+   min-height: 25vh;
+   padding: 5% 10% 5% 10%;
+   margin: 0;
+   border-radius: 5px;
+ }
+
+ @media only screen and (max-width : 992px) {
+   .home-ea-section-body {
+     padding: 0% 0% 0% 0%;
+   }
+
+ }
+
+
+ .home-ea-section h2 {
+   margin-top: 50px;
+   margin-bottom: 100px;
+ }
+
+  /* Medium Devices, Desktops */
+ @media only screen and (max-width : 992px) {
+   .home-ea-section h2 {
+     margin-top: 0px;
+     margin-bottom: 0px;
+   }
+
+ }
+
+ .home-ea-ecampusafrique {
+   background-color: rgba(144,238,144, .25);
+ }
+
+ .home-ea-plateforme {
+   background-color: rgba(240,230,140, .25);
+ }
+
+ .home-ea-origines {
+   background-color: rgba(238,130,238, .25);
+ }
+
+ .home-ea-table {
+   width: 90%;
+   margin: 15px 5% 0 5%;
+ }
+
+ .home-ea-ecampusafrique .home-ea-table {
+   border-top: 1px solid rgba(144,238,144, .5);
+   border-bottom: 1px solid rgba(144,238,144, .5);
+   background-color: rgba(255, 255, 255, .15);
+ }
+
+ .ecampusafrique-table td {
+   vertical-align: top;
+   width: 50%;
+ }
+
+ ul {
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+ li {
+   text-align: left;
+   margin: 5px;
+   padding: 5px;
+ }
+
+ /* ---------------------  button stuff ----------------------- */
+ .home-cpf-more-btn {
+   margin: 100px 0 0 100px;
+   padding: 0 0 50px 0;
+ }
+
+ .home-cpf-more-btn a {
+   text-decoration: none;
+   color: white;
+   font-family: arial;
+   box-shadow: 1px 1px 5px 1px rgba(0,0,0, 0.125);
+   font-weight: 500;
+   background-image: linear-gradient(-270deg,#bd1e86,#e37d4b);
+   padding: 15px 50px;
+   font-size: 1.2em;
+   line-height: 1.33;
+ }
+
 
 </style>
 
@@ -53,6 +249,96 @@ from openedx.core.djangolib.markup import HTML, Text
       <%include file="${courses_list}" />
     </section>
 </main>
+
+<!-- -------------------------- Home Page Additions - Begin -------------------  -->
+<div class="home-ea-container">
+  <div class="offre-row">
+    <div class="offre-left">
+   <h3>OFFRE DÉCOUVERTE</h3>
+      <h4>Suivez les cours en sessions interactive ou à votre rythme, en illimité, pour développer vos compétences et découvrir nos formations.</h4>
+
+  <p>Vous aurez accès à nos cours, à des outils vous permettant de suivre votre progression, votre activité et de comparer vos résultats avec les autres apprenants.</p>
+
+    </div>
+    <div class="offre-right">
+      <a href="#">Je profite d'un mois gratuit de connection internet Comsates</a>
+    </div>
+  </div>
+
+  <div class="home-ea">
+    <div class="home-ea-section home-ea-ecampusafrique">
+      <h2>Ecampus Afrique</h2>
+      <div class="home-ea-section-body">
+        <p><strong>Le Group Ecampus Afrique est l'opérateur de la plateforme ecampusafrique.org.
+    Nos missions sont les suivantes:</strong></p>
+        <table class="home-ea-table">
+          <tr>
+            <td>
+              <ul>
+                <li>Accompagner le développement des formations tirant pleinement profit du levier numérique et accessibles au plus grand nombre</li>
+                <li>Inciter à placer le numérique au cœur du parcours étudiant et des métiers de l'enseignement professionnel, technique, supérieur et de la recherche scientifique</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Offrir des moyens et services mutualisés en soutien aux initiatives numériques des établissements publiques et privee</li>
+                <li>Promouvoir la visibilité de l'offre africaine de formations et ressources numériques</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="home-ea-section-divider divider-1">
+    </div>
+
+    <div class="home-ea-section home-ea-plateforme">
+      <h2>Ecampus Afrique, la plateforme en quelques mots</h2>
+      <div class="home-ea-section-body">
+        <p>Nous nous proposons de nouer des partnerships avec les meilleurs établissements d'enseignement, professionnel, technique et supérieur au Mali, en Afrique et à travers le monde pour une diffusion de la connaissance au plus grand nombre.
+        Notre e-learning platform est capable d'offrir des milliers de cours et formations en ligne à 1 million d'étudiants.</p>
+        <p>Grâce à l'union et les efforts de nos établissements partenaires, nous nous proposons d'offrir un vaste catalogue de cours qui s'enrichit de jour en jour avec des thématiques variées et d'actualité.</p>
+        <p>Notre catalogue est composé de cours conçus par des professeurs d'universités et d'écoles maliennes, africaines et par leurs partenaires académiques internationaux. Les étudiants et internautes peuvent les suivre de manière interactive et collaborative et à leur rythme.</p>
+      </div>
+    </div>
+
+    <div class="home-ea-section-divider divider-2">
+    </div>
+
+    <div class="home-ea-section home-ea-origines">
+      <h2>Nos origines</h2>
+      <div class="home-ea-section-body">
+        <p>Lancée par deux jeunes entrepreneurs maliens vivant aux USA en octobre 2018, la plateforme vise à fédérer les projets des universités et écoles maliennes dans un premier temps et africaine pour leur donner une visibilité internationale.
+        Le catalogue de cours disponibles sera continuellement enrichi pour proposer une variété de formations répondant aux besoins de tous les publics.</p>
+        <p>Nous nous sommes appuyés dès le début sur trois acteurs clé:</p>
+
+        <table class="home-ea-table">
+          <tr>
+            <td>
+              <ul>
+                <li>Une équipe de développer de cours en ligne</li>
+                <li>Un Full Stack Developer</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li><a href="https://comsates.com/" target="_blank">Comsates</a></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="home-cpf-more-btn">
+      <a href="#">Plus d'information</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- -------------------------- Home Page Additions - End -------------------  -->
 
 <%block name="js_extra">
    <script type="text/javascript">
