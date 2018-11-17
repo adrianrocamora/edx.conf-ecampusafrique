@@ -172,7 +172,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
  .home-ea-section h2 {
    margin-top: 50px;
-   margin-bottom: 100px;
+   margin-bottom: 0px;
    font-size: 2em;
    font-family: inherit;
  }
@@ -196,6 +196,9 @@ from openedx.core.djangolib.markup import HTML, Text
 
  .home-ea-origines {
    background-color: rgba(238,130,238, .25);
+ }
+ .home-ea-origines p {
+   text-align: left;
  }
 
  .home-ea-table {
@@ -321,21 +324,12 @@ from openedx.core.djangolib.markup import HTML, Text
         Le catalogue de cours disponibles sera continuellement enrichi pour proposer une variété de formations répondant aux besoins de tous les publics.</p>
         <p>Nous nous sommes appuyés dès le début sur trois acteurs clé:</p>
 
-        <table class="home-ea-table">
-          <tr>
-            <td>
-              <ul>
-                <li>Une équipe de développer de cours en ligne</li>
-                <li>Un Full Stack Developer</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li><a href="https://comsates.com/" target="_blank">Comsates</a></li>
-              </ul>
-            </td>
-          </tr>
-        </table>
+        <ul>
+          <li>Une équipe de développer de cours en ligne</li>
+          <li>Un Full Stack Developer</li>
+          <li><a href="https://comsates.com/" target="_blank">Comsates</a></li>
+        </ul>
+
       </div>
     </div>
 
